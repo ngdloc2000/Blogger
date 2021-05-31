@@ -1,0 +1,23 @@
+/* ------------- MAIN SECTION ------------- */
+#section-main {
+	margin-top: 128px;
+}
+
+#posts {
+	margin-bottom: 80px;
+}
+
+.grid {
+	display: flex;
+}
+
+.grid .grid-item {
+	margin-bottom: 48px;
+}
+
+.grid-col {
+	flex: 0 0 33.3333%;
+	max-width: 33.3333%;
+	padding-right: 35px;
+}
+/* ------X------ MAIN SECTION -------X----- */

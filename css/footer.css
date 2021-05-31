@@ -1,0 +1,27 @@
+/* ------------ FOOTER ------------ */
+#footer {
+	padding-top: 20px;
+}
+
+#footer .feature-post .flex-item {
+	margin-bottom: 10px;
+}
+
+.nav-link {
+	font-size: 18px;
+	margin: 12px;
+	color: var(--dark);
+	font-family: "Poppins", sans-serif;
+}
+
+#footer .tags a {
+	border-radius: 40px;
+	padding: 10px 20px;
+	font-size: 15px;
+}
+
+#footer .copyrights {
+	padding: 10px 0;
+	border-top: 2px solid var(--dark);
+}
+/* ------X------ FOOTER -------X----- */
