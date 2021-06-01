@@ -71,11 +71,11 @@ a {
 }
 
 .display-2 {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .display-3 {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .text-center {
@@ -120,12 +120,22 @@ a {
 	margin-top: 10px;
 }
 
+.mt-3 {
+	margin-top: 30px;
+}
+
 .mb-3 {
 	margin-bottom: 30px;
 }
 
 .px-1 {
 	padding: 0 5px;
+}
+
+.thumbnail {
+	width: 100%;
+	height: 500px;
+	object-fit: fill;
 }
 
 /* ----X---- GLOBAL STYLING ----X---- */
@@ -202,4 +212,10 @@ a {
 	.collapse-toggle {
 		max-height: 500px;
 	}
+}
+
+/* ARTICLE PAGE */
+#post {
+	padding: 0 32px;
+	margin-bottom: 64px;
 }
