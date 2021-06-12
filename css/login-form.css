@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrap {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to top right, rgb(0, 225, 255), rgb(0, 119, 255), rgb(231, 5, 201) 80%);
+}
+
+.form {
+	background-color: #fff;
+	width: 550px;
+	height: 540px;
+	border-radius: 10px;
+}
+
+.heading {
+	color: rgb(78, 77, 77);
+	font-size: 40px;
+	margin: 56px 0 49px 0;
+	text-align: center;
+}
+.input_form_group {
+	width: 345px;
+	display: flex;
+	margin: 0 93px 10px 93px;
+	flex-direction: column;
+}
+
+.input_label {
+	text-align: left;
+	font-weight: 700;
+	padding-bottom: 6px;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+button {
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	color: #fff;
+	background-color: rgb(31, 31, 31);
+	font-size: 13px;
+	font-weight: 500;
+	text-align: center;
+	height: 40px;
+	width: 350px;
+	margin: 10px 93px 10px 93px;
+	cursor: pointer;
+}
+
+.mess_sign_up {
+	display: inline-block;
+	color: #979797;
+	text-align: center;
+	width: 350px;
+	margin: 30px 93px 10px 93px;
+}
+
+.mess_link {
+	color: #b3b3b3;
+}

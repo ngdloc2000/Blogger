@@ -2,6 +2,9 @@
 @import url("./navigation.css");
 @import url("./main-section.css");
 @import url("./footer.css");
+@import url("./input-wrapper.css");
+@import url("./register-form.css");
+@import url("./login-form.css");
 
 /* --------- ROOT ----------- */
 :root {
@@ -165,11 +168,6 @@ a {
 		flex: 0 0 50%;
 		max-width: 50%;
 	}
-
-	.grid-col {
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
 }
 
 @media (max-width: 992px) {
@@ -180,11 +178,6 @@ a {
 
 @media (max-width: 768px) {
 	.col-3 {
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
-
-	.grid-col {
 		flex: 0 0 100%;
 		max-width: 100%;
 	}
@@ -212,10 +205,4 @@ a {
 	.collapse-toggle {
 		max-height: 500px;
 	}
-}
-
-/* ARTICLE PAGE */
-#post {
-	padding: 0 32px;
-	margin-bottom: 64px;
 }

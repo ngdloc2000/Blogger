@@ -7,8 +7,31 @@
 		<title>Blogger</title>
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyA07nPlynxGD_Rzx-L7zF1_7YSdvEBfmLk",
+				authDomain: "fir-577b1.firebaseapp.com",
+				projectId: "fir-577b1",
+				storageBucket: "fir-577b1.appspot.com",
+				messagingSenderId: "166351425217",
+				appId: "1:166351425217:web:7bd646919cb5132bf28e40",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
 	</head>
 	<body>
+		<!-- <register-form></register-form> -->
+		<!-- <login-form></login-form> -->
 		<!-------------------- HEADER --------------------->
 		<header id="header" class="shadow bg-light">
 			<nav class="container navbar">
@@ -53,72 +76,7 @@
 			<section id="posts">
 				<div class="container">
 					<div class="grid">
-						<div class="grid-col">
-							<!-- article -->
-							<div class="grid-item">
-								<article class="article">
-									<div class="card">
-										<div class="overflow-img">
-											<a href="./article.html">
-												<img src="./assets/img1.jpg" class="img-fluid" alt="" />
-											</a>
-										</div>
-										<div class="card-body text-center px-1">
-											<a href="#" class="text-title display-1 text-dark"> Đây là tiêu đề của blog </a>
-											<p class="secondary-title text-secondary display-3">
-												<span><i class="far fa-clock text-primary"></i> 29/05/2021</span>
-												<span><i class="far fa-comments text-primary"></i> 12</span>
-											</p>
-										</div>
-									</div>
-								</article>
-							</div>
-							<!-- X article X -->
-						</div>
-						<div class="grid-col">
-							<!-- article -->
-							<div class="grid-item">
-								<article class="article">
-									<div class="card">
-										<div class="overflow-img">
-											<a href="#">
-												<img src="./assets/img4.jpg" class="img-fluid" alt="" />
-											</a>
-										</div>
-										<div class="card-body text-center px-1">
-											<a href="#" class="text-title display-1 text-dark"> Đây là tiêu đề của blog </a>
-											<p class="secondary-title text-secondary display-3">
-												<span><i class="far fa-clock text-primary"></i> 29/05/2021</span>
-												<span><i class="far fa-comments text-primary"></i> 12</span>
-											</p>
-										</div>
-									</div>
-								</article>
-							</div>
-							<!-- X article X -->
-						</div>
-						<div class="grid-col">
-							<!-- article -->
-							<div class="grid-item">
-								<article class="article">
-									<div class="card">
-										<div class="overflow-img">
-											<a href="#">
-												<img src="./assets/img7.jpg" class="img-fluid" alt="" />
-											</a>
-										</div>
-										<div class="card-body text-center px-1">
-											<a href="#" class="text-title display-1 text-dark"> Đây là tiêu đề của blog </a>
-											<p class="secondary-title text-secondary display-3">
-												<span><i class="far fa-clock text-primary"></i> 29/05/2021</span>
-												<span><i class="far fa-comments text-primary"></i> 12</span>
-											</p>
-										</div>
-									</div>
-								</article>
-							</div>
-							<!-- X article X -->
-						</div>
+						<article-list id="blog-list"></article-list>
 					</div>
 
 					<div class="text-center">
@@ -243,6 +201,6 @@
 			</div>
 		</footer>
 		<!----------X------------- FOOTER --------------X------------>
-		<script src="./js/main.js"></script>
+		<script src="./js/main.js" type="module"></script>
 	</body>
 </html>
