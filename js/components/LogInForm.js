@@ -1,7 +1,7 @@
 import { login } from "../../model/user.js";
 const $template = document.createElement("template");
 $template.innerHTML = `
-    <form class="wrap">
+    <form class="wrap" action="./index.html">
         <div class="form">
             <h2 class="heading">Sign In With</h2>
             <div class="input_form_group">
@@ -21,35 +21,35 @@ $template.innerHTML = `
 `;
 
 export default class LogInForm extends HTMLElement {
-	constructor() {
-		super();
-		this.appendChild($template.content.cloneNode(true));
+  constructor() {
+    super();
+    this.appendChild($template.content.cloneNode(true));
 
-		this.$logInForm = this.querySelector(".wrap");
-		this.$email = this.querySelector(".email");
-		this.$password = this.querySelector(".password");
-	}
+    this.$logInForm = this.querySelector(".wrap");
+    this.$email = this.querySelector(".email");
+    this.$password = this.querySelector(".password");
+  }
 
-	connectedCallback() {
-		this.$logInForm.onsubmit = (event) => {
-			event.preventDefault();
-			console.log("Log in form submitted");
-			let isPassed =
-				this.$email.validate((value) => {
-					return value != "";
-				}, "Invalid email") &
-				this.$password.validate((value) => {
-					return value != "";
-				}, "Invalid password");
-			let data = {
-				email: this.$email.value,
-				password: this.$password.value,
-			};
+  connectedCallback() {
+    this.$logInForm.onsubmit = (event) => {
+      event.preventDefault();
+      console.log("Log in form submitted");
+      let isPassed =
+        this.$email.validate((value) => {
+          return value != "";
+        }, "Invalid email") &
+        this.$password.validate((value) => {
+          return value != "";
+        }, "Invalid password");
+      let data = {
+        email: this.$email.value,
+        password: this.$password.value,
+      };
 
-			if (isPassed) {
-				login(data.email, data.password);
-			}
-		};
-	}
+      if (isPassed) {
+        login(data.email, data.password);
+      }
+    };
+  }
 }
 window.customElements.define("login-form", LogInForm);

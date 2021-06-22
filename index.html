@@ -1,206 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blogger</title>
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-
-		<!-- TODO: Add SDKs for Firebase products that you want to use
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-		<script>
-			// Your web app's Firebase configuration
-			var firebaseConfig = {
-				apiKey: "AIzaSyA07nPlynxGD_Rzx-L7zF1_7YSdvEBfmLk",
-				authDomain: "fir-577b1.firebaseapp.com",
-				projectId: "fir-577b1",
-				storageBucket: "fir-577b1.appspot.com",
-				messagingSenderId: "166351425217",
-				appId: "1:166351425217:web:7bd646919cb5132bf28e40",
-			};
-			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
-		</script>
-	</head>
-	<body>
-		<!-- <register-form></register-form> -->
-		<!-- <login-form></login-form> -->
-		<!-------------------- HEADER --------------------->
-		<header id="header" class="shadow bg-light">
-			<nav class="container navbar">
-				<a href="./index.html" class="nav-brand text-dark"> Blogger </a>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBt7m2BGQadNoAu0MLRo_QWnXzBgxUeLpA",
+        authDomain: "testthu-1b7e3.firebaseapp.com",
+        projectId: "testthu-1b7e3",
+        storageBucket: "testthu-1b7e3.appspot.com",
+        messagingSenderId: "844876618434",
+        appId: "1:844876618434:web:e6b9a0e28ff65af9b8b95b",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <register-form></register-form> -->
+      <!-- <login-form></login-form> -->
+      <!-------------------- HEADER --------------------->
+      <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+          <a href="./index.html" class="nav-brand text-dark"> Blogger </a>
 
-				<!-- Toggle button -->
-				<button class="toggle-button">
-					<span><i class="fas fa-bars"></i></span>
-				</button>
+          <!-- Toggle button -->
+          <button class="toggle-button">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
 
-				<!--Collapse on Toggle button -->
-				<div class="collapse">
-					<div class="navbar-nav">
-						<a href="#" class="nav-link">Home</a>
-						<a href="#" class="nav-link">Blog</a>
-						<a href="#" class="nav-link">Pages</a>
-						<a href="#" class="nav-link">Category</a>
-						<a href="#" class="nav-link">About</a>
-						<a href="#" class="nav-link">Contact</a>
-					</div>
-				</div>
-				<!-- Search -->
-				<div class="collapse">
-					<div class="navbar-nav">
-						<div class="search-box">
-							<a href="#" class="nav-link"><i class="fas fa-search"></i></a>
-						</div>
-						<a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
-						<a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
-						<a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
-						<a href="#" class="nav-link"><i class="fab fa-dribbble"></i></a>
-						<a href="#" class="nav-link"></a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<!----------X--------- HEADER ------------X-------->
+          <!--Collapse on Toggle button -->
+          <div class="collapse">
+            <div class="navbar-nav">
+              <a href="#" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Blog</a>
+              <a href="#" class="nav-link">Pages</a>
+              <a href="#" class="nav-link">Category</a>
+              <a href="#" class="nav-link">About</a>
+              <a href="#" class="nav-link">Contact</a>
+            </div>
+          </div>
+          <!-- Search -->
+          <div class="collapse">
+            <div class="navbar-nav">
+              <div class="search-box">
+                <a href="#" class="nav-link"><i class="fas fa-search"></i></a>
+              </div>
+              <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-dribbble"></i></a>
+              <a href="#" class="nav-link"></a>
+              <button class="out" style="width: 70px; height: 20px">Đăng xuất</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!----------X--------- HEADER ------------X-------->
 
-		<!------------------- MAIN SECTION ------------------->
-		<main id="section-main">
-			<!---- BLOG POST SECTION ---->
-			<section id="posts">
-				<div class="container">
-					<div class="grid">
-						<article-list id="blog-list"></article-list>
-					</div>
+      <!------------------- MAIN SECTION ------------------->
+      <main id="section-main">
+        <!---- BLOG POST SECTION ---->
+        <section id="posts">
+          <div class="container">
+            <div class="grid">
+              <article-list id="blog-list"></article-list>
+            </div>
 
-					<div class="text-center">
-						<button class="btn btn-primary secondary-title text-light">Xem thêm</button>
-					</div>
-				</div>
-			</section>
-			<!--X-- BLOG POST SECTION --X-->
-		</main>
-		<!----------X-------- MAIN SECTION ----------X-------->
+            <div class="text-center">
+              <button id="button" class="btn btn-primary secondary-title text-light">Thêm</button>
+            </div>
+          </div>
+        </section>
+        <!--X-- BLOG POST SECTION --X-->
+      </main>
+      <!----------X-------- MAIN SECTION ----------X-------->
 
-		<!------------------------ FOOTER --------------------------->
-		<footer id="footer">
-			<div class="container">
-				<div class="row mb-3">
-					<!-- About Us -->
-					<div class="col-3">
-						<h2 class="footer-title secondary-title">About Us</h2>
-						<div class="secondary-title text-secondary">
-							<p class="mt-1">Chúng tôi là ...</p>
-							<address>
-								<i class="fas fa-map-marker-alt text-primary"></i>
-								Hà Nội, Việt Nam
-							</address>
-							<div class="phone"><i class="fas fa-mobile text-primary"></i> 0336688833</div>
-							<div class="email">
-								<i class="fas fa-envelope text-primary"></i>
-								support@gmail.com
-							</div>
-						</div>
-					</div>
+      <!------------------------ FOOTER --------------------------->
+      <footer id="footer">
+        <div class="container">
+          <div class="row mb-3">
+            <!-- About Us -->
+            <div class="col-3">
+              <h2 class="footer-title secondary-title">About Us</h2>
+              <div class="secondary-title text-secondary">
+                <p class="mt-1">Chúng tôi là ...</p>
+                <address>
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Hà Nội, Việt Nam
+                </address>
+                <div class="phone"><i class="fas fa-mobile text-primary"></i> 0336688833</div>
+                <div class="email">
+                  <i class="fas fa-envelope text-primary"></i>
+                  support@gmail.com
+                </div>
+              </div>
+            </div>
 
-					<!-- Feature Posts -->
-					<div class="col-3">
-						<h2 class="footer-title secondary-title">Feature Posts</h2>
-						<div class="feature-post">
-							<div class="flex-item">
-								<article class="article">
-									<div class="d-flex">
-										<a href="#">
-											<img src="./assets/img9.jpg" class="object-fit px-1" alt="" />
-											<div class="px-1">
-												<a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
-												<p class="secondary-title text-secondary display-3">
-													<span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
-												</p>
-											</div>
-										</a>
-									</div>
-								</article>
-							</div>
-							<div class="flex-item">
-								<article class="article">
-									<div class="d-flex">
-										<a href="#">
-											<img src="./assets/img12.jpg" class="object-fit px-1" alt="" />
-											<div class="px-1">
-												<a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
-												<p class="secondary-title text-secondary display-3">
-													<span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
-												</p>
-											</div>
-										</a>
-									</div>
-								</article>
-							</div>
-							<div class="flex-item">
-								<article class="article">
-									<div class="d-flex">
-										<a href="#">
-											<img src="./assets/img14.jpg" class="object-fit px-1" alt="" />
-											<div class="px-1">
-												<a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
-												<p class="secondary-title text-secondary display-3">
-													<span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
-												</p>
-											</div>
-										</a>
-									</div>
-								</article>
-							</div>
-						</div>
-					</div>
+            <!-- Feature Posts -->
+            <div class="col-3">
+              <h2 class="footer-title secondary-title">Feature Posts</h2>
+              <div class="feature-post">
+                <div class="flex-item">
+                  <article class="article">
+                    <div class="d-flex">
+                      <a href="#">
+                        <img src="./assets/img9.jpg" class="object-fit px-1" alt="" />
+                        <div class="px-1">
+                          <a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
+                          <p class="secondary-title text-secondary display-3">
+                            <span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="flex-item">
+                  <article class="article">
+                    <div class="d-flex">
+                      <a href="#">
+                        <img src="./assets/img12.jpg" class="object-fit px-1" alt="" />
+                        <div class="px-1">
+                          <a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
+                          <p class="secondary-title text-secondary display-3">
+                            <span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+                <div class="flex-item">
+                  <article class="article">
+                    <div class="d-flex">
+                      <a href="#">
+                        <img src="./assets/img14.jpg" class="object-fit px-1" alt="" />
+                        <div class="px-1">
+                          <a href="#" class="text-title display-2 text-dark"> Đây là tiêu đề của blog </a>
+                          <p class="secondary-title text-secondary display-3">
+                            <span><i class="far fa-clock text-primary"></i> 30/05/2021</span>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
 
-					<!-- Tag & Social -->
-					<div class="col-3">
-						<h2 class="footer-title secondary-title">Tags</h2>
-						<div class="tags">
-							<div class="d-flex flex-wrap">
-								<a href="#" class="nav-link btn bg-light">Travel</a>
-								<a href="#" class="nav-link btn bg-light">Food</a>
-								<a href="#" class="nav-link btn bg-light">Lifestyle</a>
-								<a href="#" class="nav-link btn bg-light">Technology</a>
-								<a href="#" class="nav-link btn bg-light">Fashion</a>
-							</div>
-						</div>
+            <!-- Tag & Social -->
+            <div class="col-3">
+              <h2 class="footer-title secondary-title">Tags</h2>
+              <div class="tags">
+                <div class="d-flex flex-wrap">
+                  <a href="#" class="nav-link btn bg-light">Travel</a>
+                  <a href="#" class="nav-link btn bg-light">Food</a>
+                  <a href="#" class="nav-link btn bg-light">Lifestyle</a>
+                  <a href="#" class="nav-link btn bg-light">Technology</a>
+                  <a href="#" class="nav-link btn bg-light">Fashion</a>
+                </div>
+              </div>
 
-						<h2 class="footer-title secondary-title mt-1">Social</h2>
-						<div class="tags social">
-							<div class="d-flex flex-wrap">
-								<a href="#" class="nav-link btn bg-light">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-								<a href="#" class="nav-link btn bg-light">
-									<i class="fab fa-twitter"></i>
-								</a>
-								<a href="#" class="nav-link btn bg-light">
-									<i class="fab fa-instagram"></i>
-								</a>
-								<a href="#" class="nav-link btn bg-light">
-									<i class="fab fa-dribbble"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+              <h2 class="footer-title secondary-title mt-1">Social</h2>
+              <div class="tags social">
+                <div class="d-flex flex-wrap">
+                  <a href="#" class="nav-link btn bg-light">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="nav-link btn bg-light">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="nav-link btn bg-light">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="nav-link btn bg-light">
+                    <i class="fab fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-				<!-- Copyrights -->
-				<div class="copyrights">
-					<p class="text-center text-secondary display-2">&copy 2021 <a href="#" class="text-primary">Blogger</a> - Personal Blog Theme. All rights reserved.</p>
-				</div>
-			</div>
-		</footer>
-		<!----------X------------- FOOTER --------------X------------>
-		<script src="./js/main.js" type="module"></script>
-	</body>
+          <!-- Copyrights -->
+          <div class="copyrights">
+            <p class="text-center text-secondary display-2">&copy 2021 <a href="#" class="text-primary">Blogger</a> - Personal Blog Theme. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!----------X------------- FOOTER --------------X------------>
+    <script src="./js/main.js" type="module"></script>
+  </body>
 </html>
